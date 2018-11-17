@@ -1,0 +1,20 @@
+
+´´´R
+#MAKSIMALNE NEODVISNE MNOŽICE
+def maksimalne_neodvisne_mnozice(G):
+    mnozice = []
+    pregledane = set()
+
+    def backtrack(A, B):
+        if len(B) == 0:
+            mnozice.append(A)
+        for v in B:
+            C = A + Set([v])
+            if C in pregledane:
+                continue
+            pregledane.add(C)
+            backtrack(C, B - G[v] - [v])
+
+    backtrack(Set(), Set(G))
+    return mnozice
+´´´
