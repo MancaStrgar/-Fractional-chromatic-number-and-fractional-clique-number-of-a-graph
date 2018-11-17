@@ -1,5 +1,5 @@
 
-´´´R
+'''R
 #MAKSIMALNE NEODVISNE MNOŽICE
 def maksimalne_neodvisne_mnozice(G):
     mnozice = []
@@ -17,4 +17,4 @@ def maksimalne_neodvisne_mnozice(G):
 
     backtrack(Set(), Set(G))
     return mnozice
-´´´
+'''
